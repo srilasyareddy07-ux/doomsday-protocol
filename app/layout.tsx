@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import DoomsdayCountdown from "@/components/DoomsdayCountdown";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Doomsday Protocol",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Nav />
         <main>{children}</main>
         <DoomsdayCountdown />
+        <Analytics />
       </body>
     </html>
   );
